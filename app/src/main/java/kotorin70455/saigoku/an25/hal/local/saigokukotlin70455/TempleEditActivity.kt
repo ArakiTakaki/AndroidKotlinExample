@@ -41,7 +41,7 @@ class TempleEditActivity : AppCompatActivity() {
         }
         Editable.Factory()
 
-        // getter / setter がペアになっていないと上記のやり方はできない
+        // String型はsetTextを通して変換する。　多分Editableオブジェクトを使用すればKotlinらしく記述できそうな感じある
         etHonzon.setText(temple.honzon)
         etShushi.setText(temple.shushi)
         etAddress.setText(temple.address)
