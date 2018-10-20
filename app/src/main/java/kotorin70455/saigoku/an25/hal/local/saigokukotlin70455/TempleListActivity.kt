@@ -24,7 +24,7 @@ class TempleListActivity : AppCompatActivity() {
         lvTemple.adapter = adapter
         // listenerの登録
 
-        lvTemple.onItemClickListener = lvTempleOnClick()
+        lvTemple.onItemClickListener = LvTempleOnClick()
     }
 
     private  fun createTempleList():List<String>{
@@ -35,8 +35,8 @@ class TempleListActivity : AppCompatActivity() {
     }
 
     // inner class としないと親クラスの変数にアクセスできない。
-    private inner class lvTempleOnClick : AdapterView.OnItemClickListener{
-        override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+    private inner class LvTempleOnClick : AdapterView.OnItemClickListener{
+        override fun onItemClick(parent: AdapterView<*>, _view: View, position: Int, _id: Long) {
             val templeName = parent.getItemAtPosition(position) as String
             println(templeName)
             println(position)
